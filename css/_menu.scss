@@ -1,0 +1,14 @@
+
+
+.test{
+    
+        i{
+            display:none;
+        }
+        input:checked + i {
+            display: block;
+        }
+        input{
+            display: none;
+        }
+}
