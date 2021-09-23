@@ -11,16 +11,18 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
-p {
+h3, p {
   margin: 0;
 }
 
-h3 {
-  margin: 0;
+img {
+  max-width: 100%;
 }
 
+/* color */
 /* header */
 header {
   display: -webkit-box;
@@ -39,12 +41,12 @@ header {
 }
 
 header img {
-  padding: 20px 0  15px 0;
+  padding: 20px 0 15px 0;
 }
 
 header span {
   width: 100%;
-  background-color: grey;
+  background-color: #f6f6f6;
   text-align: center;
   padding: 15px;
 }
@@ -57,11 +59,8 @@ header div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: lightgray;
-}
-
-header div h1 {
-  text-align: center;
+  background-color: #f6f6f6 h1;
+  background-color-text-align: center;
 }
 
 header div p {
@@ -69,7 +68,8 @@ header div p {
 }
 
 header div .button {
-  background-color: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -80,6 +80,36 @@ header div .button {
 }
 
 /* Tuto */
+main div ol {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main div ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  -webkit-box-shadow: 5px 0 3px gray;
+          box-shadow: 5px 0 3px gray;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  padding: 10px;
+  width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f6f6f6;
+}
+
 /* choix des restaurants */
 #restaurants {
   display: -webkit-box;
@@ -92,7 +122,7 @@ header div .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: gray;
+  background-color: #f6f6f6;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -120,31 +150,97 @@ header div .button {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px 20px 0  0;
+  border-radius: 20px 20px 0 0;
+}
+
+#restaurants a p {
+  position: relative;
+  top: -200px;
+  right: -80%;
+}
+
+#restaurants a i {
+  position: relative;
+  top: -50px;
+  right: -80%;
 }
 
 /* Footer */
 footer {
-  background-color: black;
+  background-color: #323232;
+  margin-bottom: 0%;
 }
 
 footer img {
-  fill: #252525;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 footer a {
   color: white;
 }
 
-.test i {
-  display: none;
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.test input:checked + i {
+.menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  -webkit-box-shadow: 5px 0 3px gray;
+          box-shadow: 5px 0 3px gray;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.menu div label i {
+  display: none;
+  -webkit-filter: #99E2D0;
+          filter: #99E2D0;
+  position: relative;
+  left: 95%;
+  bottom: 35px;
+}
+
+.menu div label input:checked + i {
   display: block;
 }
 
-.test input {
+.menu div label input {
   display: none;
 }
+
+/* label{
+    
+        i{
+            display:none;
+        }
+        input:checked + i {
+            display: block;
+        }
+        input{
+            display: none;
+        }
+} */
 /*# sourceMappingURL=style.css.map */

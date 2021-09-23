@@ -1,6 +1,36 @@
+.menu {
+    @include section-shape;
+
+    div {
+
+        @include carte-shape;
+
+        label {
+
+            i {
+                
+                display: none;
+                filter:$color-tiers;
+                position: relative;
+                left: 95%;
+                bottom: 35px;
+            }
+
+            input:checked+i {
+                display: block;
+
+            }
+
+            input {
+                display: none;
+            }
 
 
-.test{
+        }
+    }
+}
+
+/* label{
     
         i{
             display:none;
@@ -11,4 +41,4 @@
         input{
             display: none;
         }
-}
+} */
