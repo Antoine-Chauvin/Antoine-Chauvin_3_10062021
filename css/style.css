@@ -14,12 +14,27 @@ a {
   color: black;
 }
 
-h3, p {
+h1 {
+  font-family: 'Shrikhand';
+  font-weight: 100;
+}
+
+h3, h4 {
+  margin: 5px 5px 5px 12px;
+}
+
+p {
   margin: 0;
 }
 
 img {
   max-width: 100%;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  h2 {
+    width: 100%;
+  }
 }
 
 /* color */
@@ -73,6 +88,7 @@ header div .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-top: 10px;
   padding: 5px;
   border-radius: 100px;
   padding: 10px;
@@ -108,6 +124,20 @@ main div ol li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #f6f6f6;
+  position: relative;
+  left: 10%;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  main div ol li {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  main div ol li {
+    left: 25%;
+  }
 }
 
 /* choix des restaurants */
@@ -125,6 +155,17 @@ main div ol li {
   background-color: #f6f6f6;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  #restaurants {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 #restaurants a {
@@ -145,6 +186,12 @@ main div ol li {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  #restaurants a {
+    width: 45%;
+  }
+}
+
 #restaurants a img {
   height: 150px;
   width: 100%;
@@ -154,6 +201,9 @@ main div ol li {
 }
 
 #restaurants a p {
+  text-align: center;
+  width: 15%;
+  background-color: #99E2D0;
   position: relative;
   top: -200px;
   right: -80%;
@@ -168,7 +218,7 @@ main div ol li {
 /* Footer */
 footer {
   background-color: #323232;
-  margin-bottom: 0%;
+  padding: 15px;
 }
 
 footer img {
@@ -178,6 +228,44 @@ footer img {
 
 footer a {
   color: white;
+}
+
+.header-menu {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header-menu a {
+  margin-left: 15px;
+  width: 20%;
+}
+
+.header-menu a i {
+  font-size: 30px;
+}
+
+.header-menu img:nth-child(2) {
+  position: relative;
+  left: 25%;
+}
+
+.header-menu img:nth-child(3) {
+  width: 100%;
+}
+
+.main-menu {
+  position: relative;
+  bottom: 140px;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 10px;
+  background-color: #f6f6f6;
 }
 
 .menu {
@@ -194,6 +282,17 @@ footer a {
   background-color: #f6f6f6;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  .menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .menu div {
@@ -214,6 +313,12 @@ footer a {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  .menu div {
+    width: 45%;
+  }
+}
+
 .menu div label i {
   display: none;
   -webkit-filter: #99E2D0;
@@ -231,16 +336,32 @@ footer a {
   display: none;
 }
 
-/* label{
-    
-        i{
-            display:none;
-        }
-        input:checked + i {
-            display: block;
-        }
-        input{
-            display: none;
-        }
-} */
+figure {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 140px;
+  position: relative;
+  bottom: 140px;
+  background-color: #f6f6f6;
+}
+
+figure .button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 100px;
+  padding-top: 20px;
+  color: white;
+  width: 60%;
+  height: 50%;
+  font-size: 1.5em;
+}
 /*# sourceMappingURL=style.css.map */
