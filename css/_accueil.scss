@@ -46,7 +46,7 @@ header {
 main {
     div {
 
-        ol {
+        .list-tuto {
             align-content: center;
 
             li {
@@ -80,7 +80,7 @@ main {
             height: 150px;
             width: 100%;
             object-fit: cover;
-            border-radius: 20px 20px 0 0;
+            
         }
 
         p {
@@ -112,7 +112,10 @@ footer {
     img {
         filter: brightness(0) invert(1);
     }
-
+    li{
+        display: block;
+        margin: 4px;
+    }
     a {
         color: white;
     }

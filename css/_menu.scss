@@ -1,57 +1,129 @@
-.header-menu{
+.header-menu {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start ;
+    justify-content: center;
 
-    a{
-        margin-left: 15px;
-        width: 20%;
-        i{
+    a {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+
+        i {
             font-size: 30px;
         }
     }
-    
-    img:nth-child(2){
-        
-        position: relative;
-        left: 25%;
-    }
-    img:nth-child(3){
+
+    img:nth-child(3) {
         width: 100%;
+        max-height: 500px;
+        object-fit: cover;
     }
 }
 
 .main-menu {
     position: relative;
-        bottom: 140px;
+    margin-top: -140px;
     border-radius: 40px 40px 0 0;
     padding: 20px 10px;
     background-color: $background-color-secondary;
-    
+
+    @media (max-width: 1920px) and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        h1 {
+            min-width: 100%
+        }
+    }
+
 }
 
 
 .menu {
     @include section-shape;
 
-    div {
+    @media (max-width: 1920px) and (min-width: 768px) {
+        width: 33%;
+    }
+    >h2{
+        text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+        &::after{
+            content: "";
+            width: 3rem;
+            height: 0.25rem;
+            background-color: #99E2D0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    .card {
 
         @include carte-shape;
+        height: 70px;
+        display: block;
+        animation: itemAppear 0.6s;
+        animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+        animation-fill-mode: both;
+        transform: scale(0);
+
+        @media (max-width: 1920px) and (min-width: 768px) {
+            width: 95%;
+        }
 
         label {
+            display: flex;
+            height: 70px;
 
-            i {
+            div {
+                width: 100%;
+                overflow: hidden;
 
-                display: none;
-                filter: $color-tiers;
-                position: relative;
-                left: 95%;
-                bottom: 35px;
+                h3,
+                p {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin: 5px 5px 5px 12px;
+                }
+
+                
             }
 
-            input:checked+i {
-                display: block;
+            >p {
+                position: relative;
+                top: 32px;
+                right: 5px;
+                font-weight: bolder;
 
+            }
+
+            span {
+
+                i.fas.fa-check.fa-stack-1x {
+                    color: $color-tiers;
+                }
+
+                .fa-stack-1x,
+                .fa-stack-2x {
+                    top: 25px
+                }
+
+                height: 100%;
+                width: 0%;
+                font-size: 10px;
+                overflow: hidden;
+                background-color: $color-tiers;
+                transition: width 0.3s;
+            }
+
+            input:checked+span,
+            &:hover>span {
+                width: 60px;
             }
 
             input {
@@ -69,8 +141,6 @@ figure {
     justify-content: center;
     align-content: center;
     height: 140px;
-    position: relative;
-    bottom: 140px;
     background-color: $background-color-secondary;
 
     .button {
@@ -85,4 +155,3 @@ figure {
         font-size: 1.5em;
     }
 }
-
