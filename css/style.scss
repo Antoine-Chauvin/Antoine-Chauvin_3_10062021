@@ -1,47 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-}
-h1{
-    font-family: 'Shrikhand';
-    font-weight: 100;
+  text-decoration: none;
+  color: black;
 }
 
-h3, h4 {
-    margin: 5px 5px 5px 12px;
+h1 {
+  font-family: 'Shrikhand';
+  font-weight: 100;
 }
+
+h3,
+h4 {
+  margin: 5px 5px 5px 12px;
+}
+
 p {
-    margin: 0;
+  margin: 0;
 }
 
 img {
-    max-width: 100%;
-}
-@media screen and (max-width: 1920px) and (min-width: 768px) {
-    h2 {
-        width: 100%;
-    }
+  max-width: 100%;
 }
 
-/* @mixin Button {
-    @include gradient-buton;
-    align-self: center;
-    padding: 5px;                       Marche pas 
-    border-radius: 100px;
-    padding: 10px;
-    color: white; 
-} */
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  h2 {
+    width: 100%;
+  }
+}
+
+
 
 /* color */
 
@@ -52,75 +49,98 @@ $background-color-secondary:#f6f6f6;
 $background-color-third:#323232;
 
 @mixin gradient-buton {
-    background: linear-gradient($color-secondary, $color-primary);
+  background: linear-gradient($color-secondary, $color-primary);
 }
 
 @mixin carte-shape {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 90%;
-    box-shadow: 3px 3px 5px -2px grey;
-    margin: 10px;
-    background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+  box-shadow: 3px 3px 5px -2px grey;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
 
-    @media screen and (max-width: 1920px) and (min-width: 768px) {
-        
-        width: 45%;
+  @media screen and (max-width: 1920px) and (min-width: 768px) {
 
-    }
+    width: 45%;
+
+  }
 }
 
 @mixin section-shape {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $background-color-secondary;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-color-secondary;
+  justify-content: space-around;
 
-    @media screen and (max-width: 1920px) and (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  @media screen and (max-width: 1920px) and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
 }
 
 
 @keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(0)
   }
 
-  @keyframes loader {
-    100% {
-      opacity: 0;
-      z-index: -10;
-    }
-  } 
-  
-  @keyframes jump {
-    0% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(0.5rem);
-    }
-    75% {
-      transform: translateY(-0.5rem);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(0.5rem);
+  }
+
+  75% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 
 
 @import "accueil";
 @import "menu";
+
+
+/* test */
+.heart {
+  height: 40px;
+ 
+  
+  .filled-heart{
+    visibility: hidden;
+    transition: visibility;
+    color: $color-secondary;
+  }
+  &:hover >i{
+    visibility: visible;
+  }
+
+  
+ 
+}

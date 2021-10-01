@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Oh my food</title>
 </head>
 
 <body>
+
+    <div class="loading">
+        <div class="loader__itemContainer">
+            <div class="loader__item loader__item--1"></div>
+            <div class="loader__item loader__item--2"></div>
+            <div class="loader__item loader__item--3"></div>
+        </div>
+    </div>
+
     <header>
         <img src="./Maquettes_Ohmyfood/images/logo/ohmyfood@2x.svg" alt="Oh my food">
         <span><i class="fas fa-map-marker-alt"></i> Paris, Belleville</span>
@@ -40,7 +48,10 @@
                 <h3>La palette du goût</h3>
                 <h4>Ménilmontant</h4>
                 <p>Nouveau</p>
-                <i class="far fa-heart"></i>
+                <span class="fa-stack fa-2x heart">
+                    <i class="far fa-heart fa-stack-1x border-heart"></i>
+                    <i class="fas fa-heart fa-stack-1x filled-heart"></i>
+                </span>
             </a>
 
 
@@ -50,21 +61,30 @@
                 <h3>La note Enchantée</h3>
                 <h4>Charonne</h4>
                 <p>Nouveau</p>
-                <i class="far fa-heart"></i>
+                <span class="fa-stack heart">
+                    <i class="far fa-heart fa-stack-1x border-heart"></i>
+                    <i class="fas fa-heart fa-stack-1x filled-heart"></i>
+                </span>
             </a>
             <a href="./html/a_la_francaise.html">
                 <img src="./Maquettes_Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                     alt="À la Française">
                 <h3>À la Française</h3>
                 <h4>Cité Rouge</h4>
-                <i class="far fa-heart"></i>
+                <span class="fa-stack heart">
+                    <i class="far fa-heart fa-stack-1x border-heart"></i>
+                    <i class="fas fa-heart fa-stack-1x filled-heart"></i>
+                </span>
             </a>
             <a href="./html/delice_des_sens.html">
                 <img src="./Maquettes_Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                     alt="Le délice des sens">
                 <h3>Le délice des sens</h3>
                 <h4>Folie-Méricourt</h4>
-                <i class="far fa-heart"></i>
+                <span class="fa-stack heart">
+                    <i class="far fa-heart fa-stack-1x border-heart"></i>
+                    <i class="fas fa-heart fa-stack-1x filled-heart"></i>
+                </span>
             </a>
         </section>
     </main>

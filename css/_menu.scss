@@ -45,12 +45,14 @@
     @media (max-width: 1920px) and (min-width: 768px) {
         width: 33%;
     }
-    >h2{
+
+    >h2 {
         text-transform: uppercase;
-    position: relative;
-    padding-bottom: 0.5rem;
-    font-weight: bold;
-        &::after{
+        position: relative;
+        padding-bottom: 0.5rem;
+        font-weight: bold;
+
+        &::after {
             content: "";
             width: 3rem;
             height: 0.25rem;
@@ -91,7 +93,7 @@
                     margin: 5px 5px 5px 12px;
                 }
 
-                
+
             }
 
             >p {
