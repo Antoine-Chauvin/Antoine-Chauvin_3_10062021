@@ -60,20 +60,6 @@ img {
   }
 }
 
-@-webkit-keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
 @-webkit-keyframes jump {
   0% {
     -webkit-transform: translateY(0);
@@ -113,98 +99,29 @@ img {
 }
 
 /* loader */
-.loading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  height: 1000px;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: transparent;
-  -webkit-animation: load 0.3s;
-          animation: load 0.3s;
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  z-index: 10000;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.loader {
+  visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  right: 45%;
+  top: 50%;
+  -webkit-animation: loader 1.4s;
+          animation: loader 1.4s;
 }
 
-.loading__item {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 1rem;
-  -webkit-animation: jump 1s;
-          animation: jump 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+.loader i {
+  color: #FF79DA;
 }
 
-.loading__itemContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 5rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.loading__item--1 {
-  background-color: #9356DC;
-}
-
-.loading__item--2 {
-  background-color: #FF79DA;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-
-.loading__item--3 {
-  background-color: #99E2D0;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-@-webkit-keyframes load {
+@-webkit-keyframes loader {
   100% {
-    opacity: 0;
-    z-index: -10;
+    visibility: visible;
   }
 }
 
-@keyframes load {
+@keyframes loader {
   100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-@keyframes jump {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  25% {
-    -webkit-transform: translateY(0.5rem);
-            transform: translateY(0.5rem);
-  }
-  75% {
-    -webkit-transform: translateY(-0.5rem);
-            transform: translateY(-0.5rem);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    visibility: visible;
   }
 }
 
@@ -307,7 +224,13 @@ main div .list-tuto li {
 
 @media screen and (max-width: 1920px) and (min-width: 768px) {
   main div .list-tuto li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     left: 25%;
+  }
+  main div .list-tuto li i {
+    margin-right: 10px;
   }
 }
 
@@ -383,6 +306,9 @@ main div .list-tuto li {
 #restaurants a .heart {
   display: inline-block;
   width: 25%;
+  position: relative;
+  left: 70%;
+  bottom: 50px;
 }
 
 #restaurants a .heart .filled-heart {
@@ -637,21 +563,5 @@ figure .button {
   width: 60%;
   height: 50%;
   font-size: 1.5em;
-}
-
-/* test */
-.heart {
-  height: 40px;
-}
-
-.heart .filled-heart {
-  visibility: hidden;
-  -webkit-transition: visibility;
-  transition: visibility;
-  color: #FF79DA;
-}
-
-.heart:hover > i {
-  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

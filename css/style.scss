@@ -96,13 +96,6 @@ $background-color-third:#323232;
   }
 }
 
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -127,20 +120,3 @@ $background-color-third:#323232;
 @import "menu";
 
 
-/* test */
-.heart {
-  height: 40px;
- 
-  
-  .filled-heart{
-    visibility: hidden;
-    transition: visibility;
-    color: $color-secondary;
-  }
-  &:hover >i{
-    visibility: visible;
-  }
-
-  
- 
-}
