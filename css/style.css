@@ -35,6 +35,7 @@ img {
 @media screen and (max-width: 1920px) and (min-width: 768px) {
   h2 {
     width: 100%;
+    padding-left: 15px;
   }
 }
 
@@ -461,8 +462,8 @@ footer a {
   overflow: hidden;
   height: 70px;
   display: block;
-  -webkit-animation: itemAppear 0.6s;
-          animation: itemAppear 0.6s;
+  -webkit-animation: itemAppear 0.5s;
+          animation: itemAppear 0.5s;
   -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
           animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   -webkit-animation-fill-mode: both;
@@ -536,6 +537,56 @@ footer a {
 
 .menu .card label input {
   display: none;
+}
+
+.card:nth-child(1) {
+  -webkit-animation-delay: 0.09091s;
+          animation-delay: 0.09091s;
+}
+
+.card:nth-child(2) {
+  -webkit-animation-delay: 0.18182s;
+          animation-delay: 0.18182s;
+}
+
+.card:nth-child(3) {
+  -webkit-animation-delay: 0.27273s;
+          animation-delay: 0.27273s;
+}
+
+.card:nth-child(4) {
+  -webkit-animation-delay: 0.36364s;
+          animation-delay: 0.36364s;
+}
+
+.card:nth-child(5) {
+  -webkit-animation-delay: 0.45455s;
+          animation-delay: 0.45455s;
+}
+
+.card:nth-child(6) {
+  -webkit-animation-delay: 0.54545s;
+          animation-delay: 0.54545s;
+}
+
+.card:nth-child(7) {
+  -webkit-animation-delay: 0.63636s;
+          animation-delay: 0.63636s;
+}
+
+.card:nth-child(8) {
+  -webkit-animation-delay: 0.72727s;
+          animation-delay: 0.72727s;
+}
+
+.card:nth-child(9) {
+  -webkit-animation-delay: 0.81818s;
+          animation-delay: 0.81818s;
+}
+
+.card:nth-child(10) {
+  -webkit-animation-delay: 0.90909s;
+          animation-delay: 0.90909s;
 }
 
 figure {
