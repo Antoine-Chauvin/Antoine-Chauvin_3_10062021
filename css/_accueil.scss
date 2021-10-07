@@ -83,7 +83,22 @@ main {
                 background-color: $background-color-secondary;
                 position: relative;
                 left: 10%;
-
+                overflow: visible;
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-primary;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 15px;
+                    color: white;
+                    position: relative;
+                    left: -10%;
+                    @media screen and (max-width: 1920px) and (min-width: 768px){
+                        visibility: hidden;
+                    }
+                }
                 
 
                 @media screen and (max-width: 1920px) and (min-width: 768px) {
@@ -117,11 +132,14 @@ main {
 
         p {
             text-align: center;
-            width: 15%;
+            width: 20%;
             background-color: $color-tiers;
             position: relative;
             top: -200px;
             right: -80%;
+            @media screen and (max-width: 1920px) and (min-width: 768px){
+                width:18%;
+            }
         }
         .heart {
             display: inline-block;

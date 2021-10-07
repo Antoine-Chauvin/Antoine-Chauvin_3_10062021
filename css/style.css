@@ -217,11 +217,37 @@ main div .list-tuto li {
   background-color: #f6f6f6;
   position: relative;
   left: 10%;
+  overflow: visible;
 }
 
 @media screen and (max-width: 1920px) and (min-width: 768px) {
   main div .list-tuto li {
     width: 45%;
+  }
+}
+
+main div .list-tuto li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9356DC;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  left: -10%;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  main div .list-tuto li span {
+    visibility: hidden;
   }
 }
 
@@ -299,11 +325,17 @@ main div .list-tuto li {
 
 #restaurants a p {
   text-align: center;
-  width: 15%;
+  width: 20%;
   background-color: #99E2D0;
   position: relative;
   top: -200px;
   right: -80%;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  #restaurants a p {
+    width: 18%;
+  }
 }
 
 #restaurants a .heart {
