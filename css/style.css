@@ -104,10 +104,16 @@ img {
   visibility: hidden;
   z-index: 100;
   position: absolute;
-  right: 45%;
+  right: 30%;
   top: 50%;
   -webkit-animation: loader 1.4s;
           animation: loader 1.4s;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 768px) {
+  .loader {
+    right: 45%;
+  }
 }
 
 .loader i {
@@ -190,15 +196,6 @@ main div .list-tuto {
 }
 
 main div .list-tuto li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 90%;
   -webkit-box-shadow: 3px 3px 5px -2px grey;
           box-shadow: 3px 3px 5px -2px grey;
@@ -206,8 +203,13 @@ main div .list-tuto li {
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 10px;
   width: 70%;
   -ms-flex-pack: distribute;
@@ -264,6 +266,13 @@ main div .list-tuto li {
 }
 
 #restaurants a {
+  width: 90%;
+  -webkit-box-shadow: 3px 3px 5px -2px grey;
+          box-shadow: 3px 3px 5px -2px grey;
+  margin: 10px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,13 +282,6 @@ main div .list-tuto li {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 90%;
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
-  margin: 10px;
-  background-color: white;
-  border-radius: 20px;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 1920px) and (min-width: 768px) {
@@ -380,6 +382,25 @@ footer a {
   background-color: #f6f6f6;
 }
 
+.main-menu .heart {
+  display: inline-block;
+  width: 3%;
+  position: relative;
+  left: 90%;
+  bottom: 100px;
+}
+
+.main-menu .heart .filled-heart {
+  visibility: hidden;
+  -webkit-transition: visibility;
+  transition: visibility;
+  color: #FF79DA;
+}
+
+.main-menu .heart:hover > i {
+  visibility: visible;
+}
+
 @media (max-width: 1920px) and (min-width: 768px) {
   .main-menu {
     display: -webkit-box;
@@ -422,7 +443,7 @@ footer a {
 
 @media (max-width: 1920px) and (min-width: 768px) {
   .menu {
-    width: 33%;
+    width: 30%;
   }
 }
 
@@ -444,15 +465,6 @@ footer a {
 }
 
 .menu .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 90%;
   -webkit-box-shadow: 3px 3px 5px -2px grey;
           box-shadow: 3px 3px 5px -2px grey;

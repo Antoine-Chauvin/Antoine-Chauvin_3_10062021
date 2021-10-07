@@ -26,7 +26,23 @@
     border-radius: 40px 40px 0 0;
     padding: 20px 10px;
     background-color: $background-color-secondary;
-
+    .heart {
+        display: inline-block;
+        width: 3%;
+        position: relative;
+        left: 90%;
+        bottom: 100px;
+        
+        
+        .filled-heart{
+          visibility: hidden;
+          transition: visibility;
+          color: $color-secondary;
+        }
+        &:hover >i{
+          visibility: visible;
+        }
+    }
     @media (max-width: 1920px) and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -43,7 +59,7 @@
     @include section-shape;
 
     @media (max-width: 1920px) and (min-width: 768px) {
-        width: 33%;
+        width: 30%;
     }
 
     >h2 {

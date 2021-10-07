@@ -54,9 +54,6 @@ $background-color-third:#323232;
 }
 
 @mixin carte-shape {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 90%;
   box-shadow: 3px 3px 5px -2px grey;
   margin: 10px;
@@ -69,6 +66,12 @@ $background-color-third:#323232;
     width: 45%;
 
   }
+}
+
+@mixin carte-flex{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 @mixin section-shape {

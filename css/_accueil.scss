@@ -3,9 +3,12 @@
     visibility: hidden;
     z-index: 100;
     position: absolute;
-    right: 45%;
+    right: 30%;
     top: 50%;
     animation: loader 1.4s;
+    @media screen and (max-width: 1920px) and (min-width: 768px){
+        right: 45%;
+    }
     
     i{
         color: $color-secondary;
@@ -72,6 +75,7 @@ main {
 
             li {
                 @include carte-shape;
+                display: flex;
                 flex-direction: row;
                 padding: 10px;
                 width: 70%;
@@ -102,6 +106,7 @@ main {
     a {
 
         @include carte-shape;
+        @include carte-flex;
 
         img {
             height: 150px;
