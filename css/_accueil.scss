@@ -23,26 +23,40 @@
 /* header */
 
 header {
+  background-color: $background-color-secondary;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 30px;
+  div:nth-child(1) {
+      width: 100%;
+      background-color: white;
 
-  img {
-    padding: 20px 0 15px 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 50%;
+      padding: 20px 0 15px 0;
+    }
   }
 
-  span {
+  > span {
+    background-color: darken($background-color-secondary, 5%);
     width: 100%;
-    background-color: $background-color-secondary;
     text-align: center;
     padding: 15px;
+    box-shadow: inset 0px 3px 5px -4px grey;
   }
 
   div {
     display: flex;
     flex-direction: column;
-
+    & > h1 {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: bolder;
+    }
     background-color: $background-color-secondary h1 {
       text-align: center;
     }
@@ -59,6 +73,7 @@ header {
       border-radius: 100px;
       padding: 10px;
       color: white;
+      font-weight: bolder;
     }
   }
 }
@@ -66,37 +81,50 @@ header {
 /* Tuto */
 main {
   div {
+      h2{
+          padding-left: 15px;
+      }
     .list-tuto {
       align-content: center;
+      padding: 20px 20px 20px 5px;
       @media screen and (min-width: 768px) {
         display: flex;
       }
 
       li {
         @include carte-shape;
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-        width: 70%;
-        justify-content: space-around;
+        display: inline-block;
+
+        padding: 15px;
+        width: 100%;
+
         background-color: $background-color-secondary;
-        position: relative;
-        left: 10%;
         overflow: visible;
+        font-weight: bolder;
+        & > i {
+          margin-right: 10%;
+          margin-left: 5%;
+        }
+        .fa-store {
+          color: $color-primary;
+        }
         span {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background-color: $color-primary;
           width: 20px;
           height: 20px;
           border-radius: 15px;
           color: white;
           position: relative;
-          left: -10%;
+          left: -20px;
+          display: inline-block;
+          text-align: center;
+
           @media screen and (min-width: 768px) {
             visibility: hidden;
           }
+        }
+        &.tuto-restau {
+          background-color: lighten($color-primary, 37.8%);
         }
 
         @media screen and (min-width: 768px) {
@@ -116,16 +144,22 @@ main {
 #restaurants {
   @include section-shape;
   @media screen and (min-width: 768px) {
-      flex-direction: row;   
-      flex-wrap: wrap;   
+    flex-direction: row;
+    flex-wrap: wrap;
   }
+   h2{
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+   }
 
   a {
+    position: relative;
     @include carte-shape;
     @include carte-flex;
+    height: 250px;
     @media screen and (min-width: 768px) {
-        width:45%;
-        
+      width: 45%;
     }
 
     img {
@@ -135,12 +169,16 @@ main {
     }
 
     p {
+      padding: 5px;
       text-align: center;
-      width: 20%;
+      width: 85px;
       background-color: $color-tiers;
-      position: relative;
-      top: -200px;
-      right: -80%;
+      color: darken($color-tiers, 40%);
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      border-radius: 3px;
+      box-shadow: 2px 3px 4px -4px grey;
       @media screen and (min-width: 768px) {
         width: 18%;
       }
@@ -149,8 +187,8 @@ main {
       display: inline-block;
       width: 25%;
       position: relative;
-      left: 70%;
-      bottom: 50px;
+      right: 25%;
+      top: 65%;
 
       .filled-heart {
         visibility: hidden;
@@ -177,6 +215,7 @@ footer {
   padding: 15px;
 
   img {
+    padding-left: 40px;
     filter: brightness(0) invert(1);
   }
 
