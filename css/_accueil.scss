@@ -29,17 +29,17 @@ header {
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
-  div:nth-child(1) {
+  div:nth-of-type(1) {
       width: 100%;
       background-color: white;
-
-    img {
+    }
+    .logo {
         display: block;
         margin: auto;
         width: 50%;
+        max-width: 250px;
       padding: 20px 0 15px 0;
     }
-  }
 
   > span {
     background-color: darken($background-color-secondary, 5%);

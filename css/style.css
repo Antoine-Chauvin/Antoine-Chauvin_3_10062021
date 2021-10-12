@@ -157,15 +157,16 @@ header {
   padding-bottom: 30px;
 }
 
-header div:nth-child(1) {
+header div:nth-of-type(1) {
   width: 100%;
   background-color: white;
 }
 
-header div:nth-child(1) img {
+header .logo {
   display: block;
   margin: auto;
   width: 50%;
+  max-width: 250px;
   padding: 20px 0 15px 0;
 }
 
