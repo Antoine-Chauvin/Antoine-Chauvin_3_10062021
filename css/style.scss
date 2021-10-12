@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -15,7 +15,7 @@ a {
 }
 
 h1 {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-weight: 100;
 }
 
@@ -32,22 +32,21 @@ img {
   max-width: 100%;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   h2 {
     width: 100%;
     padding-left: 15px;
   }
 }
 
-
-
 /* color */
 
-$color-primary:#9356DC;
-$color-secondary: #FF79DA;
-$color-tiers: #99E2D0;
-$background-color-secondary:#f6f6f6;
-$background-color-third:#323232;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tiers: #99e2d0;
+$gradient: linear-gradient($color-secondary, $color-primary);
+$background-color-secondary: #f6f6f6;
+$background-color-third: #323232;
 
 @mixin gradient-buton {
   background: linear-gradient($color-secondary, $color-primary);
@@ -60,39 +59,25 @@ $background-color-third:#323232;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-
-  @media screen and (max-width: 1920px) and (min-width: 768px) {
-
-    width: 45%;
-
-  }
 }
 
-@mixin carte-flex{
+@mixin carte-flex {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
 @mixin section-shape {
-
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $background-color-secondary;
   justify-content: space-around;
-
-  @media screen and (max-width: 1920px) and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
 }
-
 
 @keyframes itemAppear {
   0% {
-    transform: scale(0)
+    transform: scale(0);
   }
 
   100% {
@@ -117,8 +102,6 @@ $background-color-third:#323232;
     transform: translateY(0);
   }
 }
-
-
 
 @import "accueil";
 @import "menu";

@@ -1,182 +1,191 @@
 /* loader */
-.loader{
-    visibility: hidden;
-    z-index: 100;
-    position: absolute;
-    right: 30%;
-    top: 50%;
-    animation: loader 1.4s;
-    @media screen and (max-width: 1920px) and (min-width: 768px){
-        right: 45%;
-    }
-    
-    i{
-        color: $color-secondary;
-    }
-    @keyframes loader {
-        100% {
-          visibility: visible;
-          
-        }
-    }
-}
+.loader {
+  visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  right: 30%;
+  top: 50%;
+  animation: loader 1.4s;
+  @media screen and (min-width: 768px) {
+    right: 45%;
+  }
 
+  i {
+    color: $color-secondary;
+  }
+  @keyframes loader {
+    100% {
+      visibility: visible;
+    }
+  }
+}
 
 /* header */
 
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    padding: 20px 0 15px 0;
+  }
+
+  span {
+    width: 100%;
+    background-color: $background-color-secondary;
+    text-align: center;
+    padding: 15px;
+  }
+
+  div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    img {
-        padding: 20px 0 15px 0;
+    background-color: $background-color-secondary h1 {
+      text-align: center;
     }
 
-    span {
-        width: 100%;
-        background-color: $background-color-secondary;
-        text-align: center;
-        padding: 15px;
+    p {
+      text-align: center;
     }
 
-    div {
-        display: flex;
-        flex-direction: column;
-
-        background-color: $background-color-secondary h1 {
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .button {
-            @include gradient-buton;
-            align-self: center;
-            margin-top: 10px;
-            padding: 5px;
-            border-radius: 100px;
-            padding: 10px;
-            color: white;
-        }
+    .button {
+      @include gradient-buton;
+      align-self: center;
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 100px;
+      padding: 10px;
+      color: white;
     }
-
+  }
 }
 
 /* Tuto */
 main {
-    div {
+  div {
+    .list-tuto {
+      align-content: center;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
 
-        .list-tuto {
-            align-content: center;
-
-            li {
-                @include carte-shape;
-                display: flex;
-                flex-direction: row;
-                padding: 10px;
-                width: 70%;
-                justify-content: space-around;
-                background-color: $background-color-secondary;
-                position: relative;
-                left: 10%;
-                overflow: visible;
-                span{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: $color-primary;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 15px;
-                    color: white;
-                    position: relative;
-                    left: -10%;
-                    @media screen and (max-width: 1920px) and (min-width: 768px){
-                        visibility: hidden;
-                    }
-                }
-                
-
-                @media screen and (max-width: 1920px) and (min-width: 768px) {
-                    justify-content: center;
-                    left: 25%;
-                    i{
-                        margin-right: 10px;
-                    }
-                }
-            }
+      li {
+        @include carte-shape;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        width: 70%;
+        justify-content: space-around;
+        background-color: $background-color-secondary;
+        position: relative;
+        left: 10%;
+        overflow: visible;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-primary;
+          width: 20px;
+          height: 20px;
+          border-radius: 15px;
+          color: white;
+          position: relative;
+          left: -10%;
+          @media screen and (min-width: 768px) {
+            visibility: hidden;
+          }
         }
+
+        @media screen and (min-width: 768px) {
+          justify-content: center;
+          left: 0;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
     }
+  }
 }
 
 /* choix des restaurants */
 
 #restaurants {
-    @include section-shape;
+  @include section-shape;
+  @media screen and (min-width: 768px) {
+      flex-direction: row;   
+      flex-wrap: wrap;   
+  }
 
-    a {
-
-        @include carte-shape;
-        @include carte-flex;
-
-        img {
-            height: 150px;
-            width: 100%;
-            object-fit: cover;
-
-        }
-
-        p {
-            text-align: center;
-            width: 20%;
-            background-color: $color-tiers;
-            position: relative;
-            top: -200px;
-            right: -80%;
-            @media screen and (max-width: 1920px) and (min-width: 768px){
-                width:18%;
-            }
-        }
-        .heart {
-            display: inline-block;
-            width: 25%;
-            position: relative;
-            left: 70%;
-            bottom: 50px;
-            
-            
-            .filled-heart{
-              visibility: hidden;
-              transition: visibility;
-              color: $color-secondary;
-            }
-            &:hover >i{
-              visibility: visible;
-            }
-        } 
+  a {
+    @include carte-shape;
+    @include carte-flex;
+    @media screen and (min-width: 768px) {
+        width:45%;
+        
     }
+
+    img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    p {
+      text-align: center;
+      width: 20%;
+      background-color: $color-tiers;
+      position: relative;
+      top: -200px;
+      right: -80%;
+      @media screen and (min-width: 768px) {
+        width: 18%;
+      }
+    }
+    .heart {
+      display: inline-block;
+      width: 25%;
+      position: relative;
+      left: 70%;
+      bottom: 50px;
+
+      .filled-heart {
+        visibility: hidden;
+        transition: visibility;
+        @include gradient-buton;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      &:hover > .filled-heart {
+        visibility: visible;
+      }
+      &:hover > .border-heart {
+        visibility: hidden;
+      }
+    }
+  }
 }
 
 /* Footer */
 
 footer {
-    background-color: $background-color-third;
-    padding: 15px;
+  background-color: $background-color-third;
+  padding: 15px;
 
-    img {
-        filter: brightness(0) invert(1);
-    }
+  img {
+    filter: brightness(0) invert(1);
+  }
 
-    li {
-        display: block;
-        margin: 4px;
-    }
+  li {
+    display: block;
+    margin: 4px;
+  }
 
-    a {
-        color: white;
-    }
+  a {
+    color: white;
+  }
 }

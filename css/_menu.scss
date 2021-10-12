@@ -1,182 +1,180 @@
 .header-menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    a {
-        position: absolute;
-        top: 20px;
-        left: 15px;
+  a {
+    position: absolute;
+    top: 20px;
+    left: 15px;
 
-        i {
-            font-size: 30px;
-        }
+    i {
+      font-size: 30px;
     }
+  }
 
-    img:nth-child(3) {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-    }
+  img:nth-child(3) {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
 }
 
 .main-menu {
+  position: relative;
+  margin-top: -140px;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 10px;
+  background-color: $background-color-secondary;
+  .heart {
+    display: inline-block;
+    width: 10%;
     position: relative;
-    margin-top: -140px;
-    border-radius: 40px 40px 0 0;
-    padding: 20px 10px;
-    background-color: $background-color-secondary;
-    .heart {
-        display: inline-block;
-        width: 3%;
-        position: relative;
-        left: 90%;
-        bottom: 100px;
-        
-        
-        .filled-heart{
-          visibility: hidden;
-          transition: visibility;
-          color: $color-secondary;
-        }
-        &:hover >i{
-          visibility: visible;
-        }
-    }
-    @media (max-width: 1920px) and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
+    left: 90%;
+    bottom: 100px;
 
-        h1 {
-            min-width: 100%
-        }
+    .filled-heart {
+      visibility: hidden;
+      transition: visibility;
+      @include gradient-buton;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
+    &:hover > .border-heart {
+      visibility: hidden;
+    }
+    &:hover > .filled-heart {
+      visibility: visible;
+    }
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
 
+    h1 {
+      min-width: 100%;
+    }
+  }
 }
-
 
 .menu {
-    @include section-shape;
+  @include section-shape;
 
-    @media (max-width: 1920px) and (min-width: 768px) {
-        width: 30%;
+  @media  (min-width: 768px) {
+    width: 30%;
+  }
+
+  > h2 {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background-color: #99e2d0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .card {
+    @include carte-shape;
+    height: 70px;
+    display: block;
+    animation: itemAppear 0.5s;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-fill-mode: both;
+    transform: scale(0);
+
+    @media (min-width: 768px) {
+      width: 95%;
     }
 
-    >h2 {
-        text-transform: uppercase;
+    label {
+      display: flex;
+      height: 70px;
+
+      div {
+        width: 100%;
+        overflow: hidden;
+
+        h3,
+        p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          margin: 5px 5px 5px 12px;
+        }
+      }
+
+      > p {
         position: relative;
-        padding-bottom: 0.5rem;
-        font-weight: bold;
+        top: 32px;
+        right: 5px;
+        font-weight: bolder;
+      }
 
-        &::after {
-            content: "";
-            width: 3rem;
-            height: 0.25rem;
-            background-color: #99E2D0;
-            position: absolute;
-            left: 0;
-            bottom: 0;
+      span {
+        i.fas.fa-check.fa-stack-1x {
+          color: $color-tiers;
         }
+
+        .fa-stack-1x,
+        .fa-stack-2x {
+          top: 25px;
+        }
+
+        height: 100%;
+        width: 0%;
+        font-size: 10px;
+        overflow: hidden;
+        background-color: $color-tiers;
+        transition: width 0.3s;
+      }
+
+      input:checked + span{
+        width: 60px;
+      }
+      @media screen and (min-width: 768px) {
+        &:hover > span{
+            width: 60px;
+        }
+      }
+
+      input {
+        display: none;
+      }
     }
-
-    .card {
-
-        @include carte-shape;
-        height: 70px;
-        display: block;
-        animation: itemAppear 0.5s;
-        animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-        animation-fill-mode: both;
-        transform: scale(0);
-
-        @media (max-width: 1920px) and (min-width: 768px) {
-            width: 95%;
-        }
-
-        label {
-            display: flex;
-            height: 70px;
-
-            div {
-                width: 100%;
-                overflow: hidden;
-
-                h3,
-                p {
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    margin: 5px 5px 5px 12px;
-                }
-
-
-            }
-
-            >p {
-                position: relative;
-                top: 32px;
-                right: 5px;
-                font-weight: bolder;
-
-            }
-
-            span {
-
-                i.fas.fa-check.fa-stack-1x {
-                    color: $color-tiers;
-                }
-
-                .fa-stack-1x,
-                .fa-stack-2x {
-                    top: 25px
-                }
-
-                height: 100%;
-                width: 0%;
-                font-size: 10px;
-                overflow: hidden;
-                background-color: $color-tiers;
-                transition: width 0.3s;
-            }
-
-            input:checked+span,
-            &:hover>span {
-                width: 60px;
-            }
-
-            input {
-                display: none;
-            }
-
-
-        }
-    }
+  }
 }
 @for $i from 1 through 10 {
-
-    .card:nth-child(#{$i}) {
-       animation-delay: #{$i /11}s
-    }
+  .card:nth-child(#{$i}) {
+    animation-delay: #{$i / 11}s;
+  }
 }
 
-
 figure {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 140px;
-    background-color: $background-color-secondary;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 140px;
+  background-color: $background-color-secondary;
 
-    .button {
-        @include gradient-buton;
-        text-align: center;
-        margin-top: 10px;
-        border-radius: 100px;
-        padding-top: 20px;
-        color: white;
-        width: 60%;
-        height: 50%;
-        font-size: 1.5em;
-    }
+  .button {
+    @include gradient-buton;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 100px;
+    padding-top: 20px;
+    color: white;
+    width: 60%;
+    height: 50%;
+    font-size: 1.5em;
+  }
 }

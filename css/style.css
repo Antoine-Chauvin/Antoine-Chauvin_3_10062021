@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
 }
 
@@ -15,7 +15,7 @@ a {
 }
 
 h1 {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-weight: 100;
 }
 
@@ -32,7 +32,7 @@ img {
   max-width: 100%;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   h2 {
     width: 100%;
     padding-left: 15px;
@@ -110,14 +110,14 @@ img {
           animation: loader 1.4s;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .loader {
     right: 45%;
   }
 }
 
 .loader i {
-  color: #FF79DA;
+  color: #ff79da;
 }
 
 @-webkit-keyframes loader {
@@ -177,8 +177,8 @@ header div p {
 }
 
 header div .button {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -193,6 +193,14 @@ header div .button {
 main div .list-tuto {
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  main div .list-tuto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 main div .list-tuto li {
@@ -220,12 +228,6 @@ main div .list-tuto li {
   overflow: visible;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
-  main div .list-tuto li {
-    width: 45%;
-  }
-}
-
 main div .list-tuto li span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +238,7 @@ main div .list-tuto li span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 20px;
   height: 20px;
   border-radius: 15px;
@@ -245,18 +247,18 @@ main div .list-tuto li span {
   left: -10%;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   main div .list-tuto li span {
     visibility: hidden;
   }
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   main div .list-tuto li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    left: 25%;
+    left: 0;
   }
   main div .list-tuto li i {
     margin-right: 10px;
@@ -280,7 +282,7 @@ main div .list-tuto li span {
       justify-content: space-around;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #restaurants {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -310,7 +312,7 @@ main div .list-tuto li span {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #restaurants a {
     width: 45%;
   }
@@ -326,13 +328,13 @@ main div .list-tuto li span {
 #restaurants a p {
   text-align: center;
   width: 20%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: relative;
   top: -200px;
   right: -80%;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   #restaurants a p {
     width: 18%;
   }
@@ -350,11 +352,19 @@ main div .list-tuto li span {
   visibility: hidden;
   -webkit-transition: visibility;
   transition: visibility;
-  color: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-#restaurants a .heart:hover > i {
+#restaurants a .heart:hover > .filled-heart {
   visibility: visible;
+}
+
+#restaurants a .heart:hover > .border-heart {
+  visibility: hidden;
 }
 
 /* Footer */
@@ -416,7 +426,7 @@ footer a {
 
 .main-menu .heart {
   display: inline-block;
-  width: 3%;
+  width: 10%;
   position: relative;
   left: 90%;
   bottom: 100px;
@@ -426,14 +436,22 @@ footer a {
   visibility: hidden;
   -webkit-transition: visibility;
   transition: visibility;
-  color: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.main-menu .heart:hover > i {
+.main-menu .heart:hover > .border-heart {
+  visibility: hidden;
+}
+
+.main-menu .heart:hover > .filled-heart {
   visibility: visible;
 }
 
-@media (max-width: 1920px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .main-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -462,18 +480,7 @@ footer a {
       justify-content: space-around;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
-  .menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 1920px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu {
     width: 30%;
   }
@@ -490,7 +497,7 @@ footer a {
   content: "";
   width: 3rem;
   height: 0.25rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -516,13 +523,7 @@ footer a {
           transform: scale(0);
 }
 
-@media screen and (max-width: 1920px) and (min-width: 768px) {
-  .menu .card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 1920px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .menu .card {
     width: 95%;
   }
@@ -560,13 +561,13 @@ footer a {
   width: 0%;
   font-size: 10px;
   overflow: hidden;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
 
 .menu .card label span i.fas.fa-check.fa-stack-1x {
-  color: #99E2D0;
+  color: #99e2d0;
 }
 
 .menu .card label span .fa-stack-1x,
@@ -574,9 +575,14 @@ footer a {
   top: 25px;
 }
 
-.menu .card label input:checked + span,
-.menu .card label:hover > span {
+.menu .card label input:checked + span {
   width: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu .card label:hover > span {
+    width: 60px;
+  }
 }
 
 .menu .card label input {
@@ -648,8 +654,8 @@ figure {
 }
 
 figure .button {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
   text-align: center;
   margin-top: 10px;
   border-radius: 100px;
