@@ -92,7 +92,7 @@
     @include carte-shape;
     height: 70px;
     display: block;
-    animation: itemAppear 0.5s;
+    animation: cards_appear 0.5s;
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
     transform: scale(0);
@@ -100,10 +100,11 @@
     @media (min-width: 768px) {
       width: 95%;
     }
-
-    label {
+    
+  .label {
       display: flex;
       height: 70px;
+      cursor: pointer;
 
       div {
         width: 100%;
@@ -146,7 +147,7 @@
       input:checked + span{
         width: 60px;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 1026px) {
         &:hover > span{
             width: 60px;
         }
@@ -158,6 +159,7 @@
     }
   }
 }
+/* appear delay cards */
 @for $i from 1 through 10 {
   .card:nth-child(#{$i}) {
     animation-delay: #{$i / 11}s;
