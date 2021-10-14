@@ -226,7 +226,7 @@ main div .list-tuto {
   padding: 20px 20px 20px 5px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   main div .list-tuto {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -271,7 +271,7 @@ main div .list-tuto li span {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   main div .list-tuto li span {
     visibility: hidden;
   }
@@ -281,8 +281,9 @@ main div .list-tuto li.tuto-restau {
   background-color: #f9f6fd;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   main div .list-tuto li {
+    text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -383,10 +384,10 @@ main div .list-tuto li.tuto-restau {
 
 #restaurants a .heart {
   display: inline-block;
-  width: 25%;
+  width: 32px;
   position: relative;
-  right: 25%;
-  top: 65%;
+  right: 15%;
+  top: 60%;
 }
 
 #restaurants a .heart .filled-heart {
@@ -468,7 +469,8 @@ footer a {
 
 .main-menu .heart {
   display: inline-block;
-  width: 10%;
+  width: 32px;
+  height: 32px;
   position: relative;
   left: 85%;
   bottom: 78px;
