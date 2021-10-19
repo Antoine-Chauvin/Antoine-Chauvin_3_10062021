@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,7 +19,6 @@ h1 {
   padding-left: 10px;
   font-size: 1.7rem;
 }
-
 @media screen and (min-width: 344px) {
   h1 {
     font-size: 1.6rem;
@@ -52,41 +50,20 @@ img {
     padding-left: 15px;
   }
 }
-
 /* color */
-@-webkit-keyframes cards_appear {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
 @keyframes cards_appear {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
-@-webkit-keyframes loader {
-  100% {
-    visibility: visible;
-  }
-}
-
 @keyframes loader {
   100% {
     visibility: visible;
   }
 }
-
 /* loader */
 .loader {
   visibility: hidden;
@@ -94,22 +71,19 @@ img {
   position: absolute;
   right: 30%;
   top: 50%;
-  -webkit-animation: loader 1.4s;
-          animation: loader 1.4s;
+  animation: loader 1.4s;
   background-color: #ffffffc7;
   right: 0;
   left: 0;
   top: 0;
   bottom: 0;
 }
-
 .loader i {
   color: #ff79da;
   position: relative;
   left: 27%;
   top: 45%;
 }
-
 @media screen and (min-width: 768px) {
   .loader i {
     left: 45%;
@@ -119,27 +93,16 @@ img {
 /* header */
 header {
   background-color: #f6f6f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 30px;
 }
-
 header div:nth-of-type(1) {
   width: 100%;
   background-color: white;
 }
-
 header .logo {
   display: block;
   margin: auto;
@@ -147,82 +110,57 @@ header .logo {
   max-width: 250px;
   padding: 20px 0 15px 0;
 }
-
 header > span {
   background-color: #e9e9e9;
   width: 100%;
   text-align: center;
   padding: 15px;
-  -webkit-box-shadow: inset 0px 3px 5px -4px grey;
-          box-shadow: inset 0px 3px 5px -4px grey;
+  box-shadow: inset 0px 3px 5px -4px grey;
 }
-
 header div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 header div > h1 {
   text-align: center;
   font-family: Roboto;
   font-weight: bolder;
 }
-
 header div p {
   text-align: center;
 }
-
 header div .button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-top: 10px;
   padding: 5px;
   border-radius: 100px;
   padding: 10px;
   color: white;
   font-weight: bolder;
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: 0.3s;
 }
-
 header div .button:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(#ff93e1, #a16be0);
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
+  box-shadow: 3px 3px 5px -2px grey;
 }
 
 /* Tuto */
 main div h2 {
   padding-left: 15px;
 }
-
 main div .list-tuto {
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   padding: 20px 20px 20px 5px;
 }
-
 @media screen and (min-width: 900px) {
   main div .list-tuto {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 main div .list-tuto li {
   width: 90%;
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
+  box-shadow: 3px 3px 5px -2px grey;
   margin: 10px;
   background-color: white;
   border-radius: 20px;
@@ -234,16 +172,13 @@ main div .list-tuto li {
   overflow: visible;
   font-weight: bolder;
 }
-
 main div .list-tuto li > i {
   margin-right: 10%;
   margin-left: 5%;
 }
-
 main div .list-tuto li .fa-store {
   color: #9356dc;
 }
-
 main div .list-tuto li span {
   background-color: #9356dc;
   width: 20px;
@@ -255,23 +190,18 @@ main div .list-tuto li span {
   display: inline-block;
   text-align: center;
 }
-
 @media screen and (min-width: 900px) {
   main div .list-tuto li span {
     visibility: hidden;
   }
 }
-
 main div .list-tuto li.tuto-restau {
   background-color: #f9f6fd;
 }
-
 @media screen and (min-width: 900px) {
   main div .list-tuto li {
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     left: 0;
   }
   main div .list-tuto li i {
@@ -281,73 +211,47 @@ main div .list-tuto li.tuto-restau {
 
 /* choix des restaurants */
 #restaurants {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #f6f6f6;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding-bottom: 100px;
 }
-
 @media screen and (min-width: 768px) {
   #restaurants {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-
 #restaurants h2 {
   text-align: left;
   width: 100%;
   padding-left: 20px;
 }
-
 #restaurants a {
   position: relative;
   width: 90%;
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
+  box-shadow: 3px 3px 5px -2px grey;
   margin: 10px;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   height: 225px;
 }
-
 @media screen and (min-width: 768px) {
   #restaurants a {
     width: 45%;
   }
 }
-
 #restaurants a img {
   height: 150px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 #restaurants a p {
   padding: 5px;
   text-align: center;
@@ -358,16 +262,13 @@ main div .list-tuto li.tuto-restau {
   top: 25px;
   right: 25px;
   border-radius: 3px;
-  -webkit-box-shadow: 2px 3px 4px -4px grey;
-          box-shadow: 2px 3px 4px -4px grey;
+  box-shadow: 2px 3px 4px -4px grey;
 }
-
 @media screen and (min-width: 768px) {
   #restaurants a p {
     width: 18%;
   }
 }
-
 #restaurants a .heart {
   display: inline-block;
   width: 32px;
@@ -375,22 +276,17 @@ main div .list-tuto li.tuto-restau {
   right: 16%;
   top: 68%;
 }
-
 #restaurants a .heart .filled-heart {
   visibility: hidden;
-  -webkit-transition: visibility;
   transition: visibility;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-
 #restaurants a .heart:hover > .filled-heart {
   visibility: visible;
 }
-
 #restaurants a .heart:hover > .border-heart {
   visibility: hidden;
 }
@@ -400,49 +296,35 @@ footer {
   background-color: #323232;
   padding: 15px;
 }
-
 footer img {
   padding-left: 40px;
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
-
 footer li {
   display: block;
   margin: 4px;
 }
-
 footer a {
   color: white;
 }
 
 .header-menu {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .header-menu a {
   position: absolute;
   top: 20px;
   left: 15px;
 }
-
 .header-menu a i {
   font-size: 30px;
 }
-
 .header-menu img:nth-child(3) {
   width: 100%;
   max-height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .main-menu {
@@ -452,42 +334,32 @@ footer a {
   padding: 20px 10px;
   background-color: #f6f6f6;
 }
-
 .main-menu .heart {
   display: inline-block;
   width: 32px;
   height: 32px;
   position: relative;
   left: 85%;
-  bottom: 70px;
+  bottom: 78px;
 }
-
 .main-menu .heart .filled-heart {
   visibility: hidden;
-  -webkit-transition: visibility;
   transition: visibility;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .main-menu .heart:hover > .border-heart {
   visibility: hidden;
 }
-
 .main-menu .heart:hover > .filled-heart {
   visibility: visible;
 }
-
 @media (min-width: 768px) {
   .main-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .main-menu h1 {
     min-width: 100%;
@@ -495,40 +367,25 @@ footer a {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #f6f6f6;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-
 @media (min-width: 768px) {
   .menu {
     width: 30%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 }
-
 .menu > h2 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: bold;
 }
-
 .menu > h2:after {
   content: "";
   width: 3rem;
@@ -538,52 +395,39 @@ footer a {
   left: 0;
   bottom: 0;
 }
-
 @media (min-width: 768px) {
   .menu > h2:after {
     left: 1rem;
   }
 }
-
 .menu .card {
   width: 90%;
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
+  box-shadow: 3px 3px 5px -2px grey;
   margin: 10px;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
   height: 70px;
   display: block;
-  -webkit-animation: cards_appear 0.5s;
-          animation: cards_appear 0.5s;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  animation: cards_appear 0.5s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scale(0);
 }
-
 @media (min-width: 768px) {
   .menu .card {
     width: 95%;
   }
 }
-
 .menu .card .label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 70px;
   cursor: pointer;
 }
-
 .menu .card .label div {
   width: 100%;
   overflow: hidden;
 }
-
 .menu .card .label div h3,
 .menu .card .label div p {
   text-overflow: ellipsis;
@@ -591,127 +435,96 @@ footer a {
   overflow: hidden;
   margin: 5px 5px 5px 12px;
 }
-
 .menu .card .label > p {
   position: relative;
   top: 32px;
   right: 5px;
   font-weight: bolder;
 }
-
 .menu .card .label span {
   height: 100%;
   width: 0%;
   font-size: 10px;
   overflow: hidden;
   background-color: #99e2d0;
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  transition: width 0.3s;
 }
-
 .menu .card .label span i.fas.fa-check.fa-stack-1x {
   color: #99e2d0;
 }
-
 .menu .card .label span .fa-stack-1x,
 .menu .card .label span .fa-stack-2x {
   top: 25px;
-  -webkit-transition: -webkit-transform .2s ease-in;
-  transition: -webkit-transform .2s ease-in;
-  transition: transform .2s ease-in;
-  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+  transition: transform 0.2s ease-in;
 }
-
 .menu .card .label input:checked + span {
   width: 60px;
 }
-
 .menu .card .label input:checked + span > i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-
 @media screen and (min-width: 1026px) {
   .menu .card .label:hover > span {
     width: 60px;
   }
   .menu .card .label:hover > span > i {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .menu .card .label input {
   display: none;
 }
 
 /* appear delay cards */
 .card:nth-child(1) {
-  -webkit-animation-delay: 0.09091s;
-          animation-delay: 0.09091s;
+  animation-delay: 0.0909090909s;
 }
 
 .card:nth-child(2) {
-  -webkit-animation-delay: 0.18182s;
-          animation-delay: 0.18182s;
+  animation-delay: 0.1818181818s;
 }
 
 .card:nth-child(3) {
-  -webkit-animation-delay: 0.27273s;
-          animation-delay: 0.27273s;
+  animation-delay: 0.2727272727s;
 }
 
 .card:nth-child(4) {
-  -webkit-animation-delay: 0.36364s;
-          animation-delay: 0.36364s;
+  animation-delay: 0.3636363636s;
 }
 
 .card:nth-child(5) {
-  -webkit-animation-delay: 0.45455s;
-          animation-delay: 0.45455s;
+  animation-delay: 0.4545454545s;
 }
 
 .card:nth-child(6) {
-  -webkit-animation-delay: 0.54545s;
-          animation-delay: 0.54545s;
+  animation-delay: 0.5454545455s;
 }
 
 .card:nth-child(7) {
-  -webkit-animation-delay: 0.63636s;
-          animation-delay: 0.63636s;
+  animation-delay: 0.6363636364s;
 }
 
 .card:nth-child(8) {
-  -webkit-animation-delay: 0.72727s;
-          animation-delay: 0.72727s;
+  animation-delay: 0.7272727273s;
 }
 
 .card:nth-child(9) {
-  -webkit-animation-delay: 0.81818s;
-          animation-delay: 0.81818s;
+  animation-delay: 0.8181818182s;
 }
 
 .card:nth-child(10) {
-  -webkit-animation-delay: 0.90909s;
-          animation-delay: 0.90909s;
+  animation-delay: 0.9090909091s;
 }
 
 figure {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   height: 140px;
   background-color: #f6f6f6;
 }
-
 figure .button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   text-align: center;
   margin-top: 10px;
@@ -723,11 +536,7 @@ figure .button {
   font-size: 1.5em;
   margin-bottom: 150px;
 }
-
 figure .button:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#a16be0));
   background-image: linear-gradient(#ff93e1, #a16be0);
-  -webkit-box-shadow: 3px 3px 5px -2px grey;
-          box-shadow: 3px 3px 5px -2px grey;
+  box-shadow: 3px 3px 5px -2px grey;
 }
-/*# sourceMappingURL=style.css.map */

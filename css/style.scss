@@ -18,16 +18,21 @@ h1 {
   font-family: "Shrikhand";
   font-weight: 100;
   padding-left: 10px;
+  font-size: 1.7rem;
+  @media screen and (min-width: 344px){
+    font-size: 1.6rem;
+  }
 }
 
 h3,
 h4 {
-  margin: 5px 5px 5px 12px;
+  margin: 0px 5px 5px 12px;
   font-weight: 300;
   
 }
 h3{
   font-weight: 700;
+  margin-top: 12px;
   
 }
 
@@ -55,8 +60,14 @@ $background-color-secondary: #f6f6f6;
 $background-color-third: #323232;
 
 @mixin gradient-buton {
-  background: linear-gradient($color-secondary, $color-primary);
+  background-image: linear-gradient($color-secondary, $color-primary);  
 }
+
+@mixin buton-hover {
+  background-image: linear-gradient(lighten($color-secondary,5%), lighten($color-primary,5%));
+  box-shadow: 3px 3px 5px -2px grey;
+}
+
 
 @mixin carte-shape {
   width: 90%;
@@ -79,6 +90,7 @@ $background-color-third: #323232;
   align-items: center;
   background-color: $background-color-secondary;
   justify-content: space-around;
+  
 }
 
 @keyframes cards_appear {

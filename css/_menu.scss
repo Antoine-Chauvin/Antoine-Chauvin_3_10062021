@@ -33,7 +33,7 @@
     height: 32px;
     position: relative;
     left: 85%;
-    bottom: 78px;
+    bottom: 70px;
 
     .filled-heart {
       visibility: hidden;
@@ -198,5 +198,10 @@ figure {
     width: 60%;
     height: 50%;
     font-size: 1.5em;
+    margin-bottom: 150px;
+
+    &:hover{
+      @include buton-hover;
+    }
   }
 }
